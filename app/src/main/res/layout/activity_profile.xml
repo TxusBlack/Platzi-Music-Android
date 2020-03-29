@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="@dimen/width_profile"
+            android:layout_height="@dimen/height_profile"
             android:contentDescription="@string/profile"
             android:src="@drawable/perfil" />
     </androidx.cardview.widget.CardView>
