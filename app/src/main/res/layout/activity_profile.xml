@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     android:padding="16dp">
 
@@ -11,9 +11,11 @@
         android:id="@+id/cdLoginProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardElevation="8dp"
         app:cardCornerRadius="20dp"
-        android:layout_gravity="center_horizontal">
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="140dp"
@@ -24,33 +26,40 @@
 
     <EditText
         android:id="@+id/etLoginUsername"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:autofillHints="@string/user"
         android:drawableStart="@drawable/vector_person"
         android:drawableLeft="@drawable/vector_person"
         android:drawablePadding="12dp"
         android:hint="@string/user"
-        android:layout_marginTop="160dp"
-        android:autofillHints="@string/user"
-        android:inputType="textAutoComplete" />
+        android:inputType="textAutoComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cdLoginProfile" />
 
     <EditText
         android:id="@+id/etLoginPassword"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints="@string/password"
         android:drawableStart="@drawable/vector_lock"
         android:drawableLeft="@drawable/vector_lock"
         android:drawablePadding="12dp"
         android:hint="@string/password"
-        android:layout_marginTop="210dp"
-        android:autofillHints="@string/password"
-        android:inputType="numberPassword" />
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLoginUsername" />
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:text="@string/login"
-        android:layout_gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
