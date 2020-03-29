@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/perfil" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:drawableStart="@drawable/vector_person"
+        android:drawableLeft="@drawable/vector_person"
+        android:drawablePadding="12dp"
+        android:hint="@string/user"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/user"
+        android:inputType="textAutoComplete" />
+
+    <EditText
+        android:drawableStart="@drawable/vector_lock"
+        android:drawableLeft="@drawable/vector_lock"
+        android:drawablePadding="12dp"
+        android:hint="@string/password"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/password"
+        android:inputType="numberPassword" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:background="@color/colorPrimary"
+        android:text="@string/login"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
